@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ejercicio5.css" >
     <title>Calculadora de Área de Terreno</title>
+    <link rel="stylesheet" href="ejercicio5.css">
 </head>
 <body>
-    <h1>Calculadora de Área de Terreno</h1>
-    <form id="terreno-form">
-        <label for="longitud">Longitud (metros):</label>
-        <input type="number" id="longitud" required>
-        <br>
-        <label for="ancho">Ancho (metros):</label>
-        <input type="number" id="ancho" required>
-        <br>
-        <button type="button" onclick="calcularArea()">Calcular</button>
-    </form>
-    <div id="resultado"></div>
-    
+    <div class="container">
+        <h1>Calculadora de Área de Terreno</h1>
+        <form id="areaForm">
+            <label for="forma">Seleccione la forma:</label>
+            <select id="forma" name="forma" required>
+                <option value="A">Forma A</option>
+                <option value="B">Forma B</option>
+            </select>
+            <div id="inputsA">
+                <label for="A">Medida A (m):</label>
+                <input type="number" id="A" name="A" required>
+                <label for="B">Medida B (m):</label>
+                <input type="number" id="B" name="B" required>
+                <label for="C">Medida C (m):</label>
+                <input type="number" id="C" name="C" required>
+            </div>
+            <button type="submit">Calcular Área</button>
+        </form>
+        <div id="result"></div>
+    </div>
     <script src="ejercicio5.js"></script>
-
 </body>
 </html>
